@@ -9,7 +9,8 @@
 import UIKit
 import SafariServices
 
-class ViewController: UIViewController, UIImagePickerControllerDelegate  {
+class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate
+ {
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var startButton: UIButton!
@@ -156,8 +157,17 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate  {
     }
     
     @objc func doubleTapped() {
-        
+        if UIImagePickerController.isSourceTypeAvailable(.photoLibrary){
+            let myPickerController = UIImagePickerController()
+            myPickerController.delegate = self as! UIImagePickerControllerDelegate & UINavigationControllerDelegate
+            myPickerController.sourceType = .photoLibrary
+            self.present(myPickerController, animated: true, completion: nil)
+        }
     }
+   
+        
+        
+    
     
 }
 
