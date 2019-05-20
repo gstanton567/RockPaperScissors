@@ -21,7 +21,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="M3x-De-3eb">
                                 <rect key="frame" x="67" y="156.5" width="280" height="674"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rock" translatesAutoresizingMaskIntoConstraints="NO" id="Is9-ko-fEg">
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rock" translatesAutoresizingMaskIntoConstraints="NO" id="Is9-ko-fEg">
                                         <rect key="frame" x="0.0" y="0.0" width="280" height="180"/>
                                         <gestureRecognizers/>
                                         <connections>
@@ -29,7 +29,7 @@
                                             <outletCollection property="gestureRecognizers" destination="Eny-dj-lrG" appends="YES" id="Gmd-91-ZDd"/>
                                         </connections>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="paper" translatesAutoresizingMaskIntoConstraints="NO" id="O6O-GS-hQ5">
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="paper" translatesAutoresizingMaskIntoConstraints="NO" id="O6O-GS-hQ5">
                                         <rect key="frame" x="0.0" y="183" width="280" height="264"/>
                                         <gestureRecognizers/>
                                         <connections>
@@ -37,7 +37,7 @@
                                             <outletCollection property="gestureRecognizers" destination="tkn-eJ-w8K" appends="YES" id="bEI-Bg-NgQ"/>
                                         </connections>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scissors" translatesAutoresizingMaskIntoConstraints="NO" id="2bG-MV-nPD">
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scissors" translatesAutoresizingMaskIntoConstraints="NO" id="2bG-MV-nPD">
                                         <rect key="frame" x="0.0" y="450" width="280" height="224"/>
                                         <gestureRecognizers/>
                                         <connections>
@@ -112,6 +112,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="paperImageView" destination="O6O-GS-hQ5" id="tpI-rE-UOf"/>
+                        <outlet property="rockImageView" destination="Is9-ko-fEg" id="H1O-nh-1Fz"/>
+                        <outlet property="scissorsImageView" destination="2bG-MV-nPD" id="fk9-o3-j7a"/>
                         <outlet property="startButton" destination="A6G-6n-DMW" id="iYb-bO-l51"/>
                         <outlet property="titleLabel" destination="tHy-Ux-2iG" id="Za5-ul-qkg"/>
                     </connections>
