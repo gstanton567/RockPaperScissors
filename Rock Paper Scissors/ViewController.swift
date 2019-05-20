@@ -134,9 +134,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         let x = SFSafariViewController(url: url1!)
         present(x, animated: true, completion: nil)
         
-        
-        
-//
     }
     
     @IBAction func onStartPressed(_ sender: UIButton) {
@@ -186,6 +183,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             if bool == 1
             {
             rockImageView.image = image
+        
             }
             else if bool == 2
             {
