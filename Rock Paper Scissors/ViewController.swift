@@ -198,7 +198,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         }
     }
     
-//    func openCamera(){
+   func openCamera(){
+    if UIImagePickerController.isSourceTypeAvailable(.camera){
+        let myPickerController = UIImagePickerController()
+        myPickerController.delegate = self as UIImagePickerControllerDelegate & UINavigationControllerDelegate
+        myPickerController.sourceType = .camera
+        self.present(myPickerController, animated: true, completion: nil)
+    }
 //
 //            let imagePicker =  UIImagePickerController()
 //            imagePicker.delegate = self
@@ -210,20 +216,20 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 //            }
 //            present(imagePicker, animated: true, completion: nil)
 //
-//    }
+  }
     
     
     @IBAction func onRockLongPress(_ sender: UILongPressGestureRecognizer) {
        
-//        openCamera()
+        openCamera()
     }
     
     @IBAction func onPaperLongPress(_ sender: UILongPressGestureRecognizer) {
-//        openCamera()
+       openCamera()
     }
     
     @IBAction func onScissorsLongPressed(_ sender: UILongPressGestureRecognizer) {
-//        openCamera()
+       openCamera()
     }
     
 }
