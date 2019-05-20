@@ -7,8 +7,10 @@
 //
 
 import UIKit
+import SafariServices
 
-class ViewController: UIViewController {
+class ViewController: UIViewController  {
+    
 
     @IBOutlet weak var titleLabel: UILabel!
     var random = Int(CGFloat.random(in: (0...3)))
@@ -68,5 +70,12 @@ class ViewController: UIViewController {
         }
         print(random)
     }
+    @IBAction func rulesButtonPressed(_ sender: UIButton) {
+        let url1 = URL(string:"https://www.wikihow.com/Play-Rock,-Paper,-Scissors")
+        let x = SFSafariViewController(url: url1!)
+        present(x, animated: true, completion: nil)
+    }
+    
+    
 }
 
