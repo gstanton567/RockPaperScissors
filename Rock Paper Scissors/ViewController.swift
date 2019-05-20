@@ -10,8 +10,8 @@ import UIKit
 import SafariServices
 
 class ViewController: UIViewController  {
-    
-
+    var timer : Timer? = nil
+    var i = 4
     @IBOutlet weak var titleLabel: UILabel!
     var random = Int(CGFloat.random(in: (0...3)))
     override func viewDidLoad() {
@@ -74,8 +74,36 @@ class ViewController: UIViewController  {
         let url1 = URL(string:"https://www.wikihow.com/Play-Rock,-Paper,-Scissors")
         let x = SFSafariViewController(url: url1!)
         present(x, animated: true, completion: nil)
+        
+        
+        
+//
     }
     
+    @IBAction func onStartPressed(_ sender: UIButton) {
+        
+            
+        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(countDown), userInfo: nil, repeats: true)
+                if i == 0
+                {
+                    titleLabel.text = "You Lose!"
+                    timer!.invalidate()
+                }
+        
+        }
+        
+    
+    
+    @objc func countDown()
+    {
+        i -= 1
+        titleLabel.text = String(i)
+        if i == 0
+        {
+            titleLabel.text = "You Lose!"
+            
+        }
+    }
     
 }
 
