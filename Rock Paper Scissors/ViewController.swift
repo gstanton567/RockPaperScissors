@@ -164,10 +164,35 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             self.present(myPickerController, animated: true, completion: nil)
         }
     }
-   
-        
-        
     
+    
+//    @objc func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+//            if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
+//                self.imagePickedBlock?(image)
+//            }
+//
+//    }
+    func openCamera(){
+        if UIImagePickerController.isSourceTypeAvailable(.camera){
+            let myPickerController = UIImagePickerController()
+            myPickerController.delegate = self
+            myPickerController.sourceType = .camera
+            self.present(myPickerController, animated: true, completion: nil)
+        }
+    }
+    
+    
+    @IBAction func onRockLongPress(_ sender: UILongPressGestureRecognizer) {
+        openCamera()
+    }
+    
+    @IBAction func onPaperLongPress(_ sender: UILongPressGestureRecognizer) {
+        openCamera()
+    }
+    
+    @IBAction func onScissorsLongPressed(_ sender: UILongPressGestureRecognizer) {
+        openCamera()
+    }
     
 }
 

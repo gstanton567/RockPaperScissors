@@ -26,6 +26,7 @@
                                         <gestureRecognizers/>
                                         <connections>
                                             <outletCollection property="gestureRecognizers" destination="lDa-Qf-rPa" appends="YES" id="GpG-Ur-8p8"/>
+                                            <outletCollection property="gestureRecognizers" destination="Eny-dj-lrG" appends="YES" id="Gmd-91-ZDd"/>
                                         </connections>
                                     </imageView>
                                     <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="paper" translatesAutoresizingMaskIntoConstraints="NO" id="O6O-GS-hQ5">
@@ -33,6 +34,7 @@
                                         <gestureRecognizers/>
                                         <connections>
                                             <outletCollection property="gestureRecognizers" destination="QWl-iK-7d9" appends="YES" id="4ga-iq-IeS"/>
+                                            <outletCollection property="gestureRecognizers" destination="tkn-eJ-w8K" appends="YES" id="bEI-Bg-NgQ"/>
                                         </connections>
                                     </imageView>
                                     <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scissors" translatesAutoresizingMaskIntoConstraints="NO" id="2bG-MV-nPD">
@@ -40,6 +42,7 @@
                                         <gestureRecognizers/>
                                         <connections>
                                             <outletCollection property="gestureRecognizers" destination="Nfg-TF-135" appends="YES" id="6OZ-bj-gGe"/>
+                                            <outletCollection property="gestureRecognizers" destination="CnF-tQ-6Rw" appends="YES" id="8UR-05-kHh"/>
                                         </connections>
                                     </imageView>
                                 </subviews>
@@ -129,6 +132,21 @@
                         <action selector="onScissorTap:" destination="BYZ-38-t0r" id="ULV-D0-HUM"/>
                     </connections>
                 </tapGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="Eny-dj-lrG">
+                    <connections>
+                        <action selector="onRockLongPress:" destination="BYZ-38-t0r" id="Og7-P2-Vh5"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="tkn-eJ-w8K">
+                    <connections>
+                        <action selector="onPaperLongPress:" destination="BYZ-38-t0r" id="1ck-5V-SCg"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="CnF-tQ-6Rw">
+                    <connections>
+                        <action selector="onScissorsLongPressed:" destination="BYZ-38-t0r" id="CfH-8C-gQd"/>
+                    </connections>
+                </pongPressGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="115.84821428571428"/>
         </scene>
