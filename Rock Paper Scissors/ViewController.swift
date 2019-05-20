@@ -220,7 +220,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     
     @IBAction func onRockLongPress(_ sender: UILongPressGestureRecognizer) {
-       
         openCamera()
     }
     

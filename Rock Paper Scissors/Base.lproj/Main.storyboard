@@ -18,28 +18,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="M3x-De-3eb">
-                                <rect key="frame" x="67" y="156.5" width="280" height="674"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="M3x-De-3eb">
+                                <rect key="frame" x="67" y="157" width="280" height="674"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rock" translatesAutoresizingMaskIntoConstraints="NO" id="Is9-ko-fEg">
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rock" translatesAutoresizingMaskIntoConstraints="NO" id="Is9-ko-fEg">
                                         <rect key="frame" x="0.0" y="0.0" width="280" height="180"/>
                                         <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="180" id="NQG-m6-Z1W"/>
+                                            <constraint firstAttribute="width" constant="280" id="xi6-iL-wNd"/>
+                                        </constraints>
                                         <connections>
                                             <outletCollection property="gestureRecognizers" destination="lDa-Qf-rPa" appends="YES" id="GpG-Ur-8p8"/>
                                             <outletCollection property="gestureRecognizers" destination="Eny-dj-lrG" appends="YES" id="Gmd-91-ZDd"/>
                                         </connections>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="paper" translatesAutoresizingMaskIntoConstraints="NO" id="O6O-GS-hQ5">
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="paper" translatesAutoresizingMaskIntoConstraints="NO" id="O6O-GS-hQ5">
                                         <rect key="frame" x="0.0" y="183" width="280" height="264"/>
                                         <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="280" id="7A0-y1-1Dd"/>
+                                            <constraint firstAttribute="height" constant="264" id="Y3u-va-3Tk"/>
+                                        </constraints>
                                         <connections>
                                             <outletCollection property="gestureRecognizers" destination="QWl-iK-7d9" appends="YES" id="4ga-iq-IeS"/>
                                             <outletCollection property="gestureRecognizers" destination="tkn-eJ-w8K" appends="YES" id="bEI-Bg-NgQ"/>
                                         </connections>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scissors" translatesAutoresizingMaskIntoConstraints="NO" id="2bG-MV-nPD">
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scissors" translatesAutoresizingMaskIntoConstraints="NO" id="2bG-MV-nPD">
                                         <rect key="frame" x="0.0" y="450" width="280" height="224"/>
                                         <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="280" id="NDO-Da-Gix"/>
+                                            <constraint firstAttribute="height" constant="224" id="b7d-R9-FF9"/>
+                                        </constraints>
                                         <connections>
                                             <outletCollection property="gestureRecognizers" destination="Nfg-TF-135" appends="YES" id="6OZ-bj-gGe"/>
                                             <outletCollection property="gestureRecognizers" destination="CnF-tQ-6Rw" appends="YES" id="8UR-05-kHh"/>
@@ -103,11 +116,9 @@
                         <constraints>
                             <constraint firstItem="DuQ-1H-7aI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="197" id="D0t-BX-LK6"/>
                             <constraint firstItem="tHy-Ux-2iG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="51" id="DLj-iq-lBX"/>
-                            <constraint firstItem="M3x-De-3eb" firstAttribute="top" secondItem="tHy-Ux-2iG" secondAttribute="bottom" constant="41" id="Ddn-wo-dNn"/>
                             <constraint firstItem="tHy-Ux-2iG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LZS-O8-qBY"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="DuQ-1H-7aI" secondAttribute="bottom" constant="103" id="MGJ-Dw-IWy"/>
                             <constraint firstItem="DuQ-1H-7aI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="lIP-eh-4uK"/>
-                            <constraint firstItem="tHy-Ux-2iG" firstAttribute="centerX" secondItem="M3x-De-3eb" secondAttribute="centerX" id="vus-yg-CS8"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
