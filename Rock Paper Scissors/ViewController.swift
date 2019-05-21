@@ -46,7 +46,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             titleLabel.text = "You Lose!"
             if i != 4 {
                 timer!.invalidate()
-            }
+                }
             startButton.isEnabled = true
             i = 4
         }
@@ -194,6 +194,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                 scissorsImageView.image = image
             }
         }
+        dismiss(animated: true, completion: nil)
     }
     
    func openCamera(){
